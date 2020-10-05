@@ -6,7 +6,7 @@ import cv2
 from bs4 import BeautifulSoup
 from torchvision import transforms, models
 from torch import nn, optim
-from MyResNetModelTraining import GenNCC
+from ResNetNCCModel import GenNCC
 from tensorboardX import SummaryWriter
 
 class VocDataset(Dataset):
