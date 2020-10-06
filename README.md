@@ -17,7 +17,7 @@ This project is a pytorch vision of NCC, which is about Discovering causal signa
 
 # Problem
 ## NCC
-My NCC model get 74% acc in open-source datasets test, which is 79% in official tf version.
+My NCC model get 74% acc in Tuebingen datasets, which is 79% in official tf version.
 
 I realize it in this way: 4 layers in NCC, the first 2 layers named embeded layers, and another 2 layers named classified layers. 
 
