@@ -16,16 +16,33 @@ This project is a pytorch vision of NCC, which is about Discovering causal signa
 4. Use codeForIntervention.py to get the result.
 
 # Problem
-My NCC model get 74% acc in open-source datasets test, which is 79% in official tf version
+## NCC
+My NCC model get 74% acc in open-source datasets test, which is 79% in official tf version.
+
+I realize it in this way: 4 layers in NCC, the first 2 layers named embeded layers, and another 2 layers named classified layers. 
+
+Every layer include: Linear => Normalization => ReLu => Dropout
+
+The whole NCC model is: input => Embeded Layers => reduce_mean => Classified Layers => sigmoid => output, and the input is [B, data_size, 2], output is [B, 1]
 
 <img src='img/NCC.png' title='Train loss' width='30%'> <img src='img/NCC-test.png' titile='Test Loss' width='30%'> <img src='img/NCC-tubtest.png' title='TubTest Loss' width='30%'>
 
-And NCC-ResNet50 get 93% acc in voc classification task, which is 97% in official tf version.
+## NCC-ResNet50
+My NCC-ResNet50 get 93% acc in voc classification task, which is 97% in official tf version.
+
+I realize it in this way:
+
+imgs => ResNet50 (without the last fc layers) => features => 512-512-20
+
+it is a mult-classification task, freeze the ResNet50 grad to finetune the 3 layers network.
 
 <img src='img/NCC-ResNet-train.png' title='NCC-ResNet-train.png'>
 
-But when I connected both 2 models, I don't get the paper's results.
+## Paper result
+But when I connected both 2 models, I don't get the paper's results in context-feature:
 
+object-features: 
 <img src='img/object-features.png' title='object-feature'>
 
+context-features:
 <img src='img/Context-feature.py.png' title='context-feature'>
