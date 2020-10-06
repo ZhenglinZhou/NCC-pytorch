@@ -16,11 +16,11 @@ This project is a pytorch vision of NCC, which is about Discovering causal signa
 4. Use codeForIntervention.py to get the result.
 
 # Problem
-My NCC model get 74% acc in open-source datasets test
+My NCC model get 74% acc in open-source datasets test, which is 79% in official tf version
 
 <img src='img/NCC.png' title='Train loss' width='30%'> <img src='img/NCC-test.png' titile='Test Loss' width='30%'> <img src='img/NCC-tubtest.png' title='TubTest Loss' width='30%'>
 
-And NCC-ResNet50 get 93% acc in voc classification task, which is 79% and 97% in official tf version.
+And NCC-ResNet50 get 93% acc in voc classification task, which is 97% in official tf version.
 
 <img src='img/NCC-ResNet-train.png' title='NCC-ResNet-train.png'>
 
