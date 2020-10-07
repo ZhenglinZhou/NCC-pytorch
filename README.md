@@ -34,7 +34,7 @@ I realize it in this way:
 
 imgs => ResNet50 (without the last fc layers) => features => 512-512-20
 
-it is a mult-classification task, freeze the ResNet50 grad to finetune the 3 layers network.
+it is a multi-label learning task, freeze the ResNet50 grad to finetune the 3 layers network.
 
 <img src='img/NCC-ResNet-train.png' title='NCC-ResNet-train.png'>
 
